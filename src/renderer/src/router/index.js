@@ -1,12 +1,30 @@
-import Layout from '@/Layout'
+import Layout from '@renderer/Layout/index.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 // 公共路由
 export const constantsRoute = [
+  // {
+  //   path: 'redirect',
+  //   hidden: true,
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: '/redirect/:path(.*)', // 匹配任意路径参数
+  //       component: () => import('@renderer/view/redirect.vue')
+  //     }
+  //   ]
+  // },
   {
-    path: 'redirect',
-    hidden: true,
-    component: Layout
+    path: '',
+    component: Layout,
+    children: [
+      {
+        path: '/index',
+        component: () => import('@renderer/view/index.vue'),
+        name: 'index',
+        meta:{ title: '首页', }
+      }
+    ]
   }
 ]
 
