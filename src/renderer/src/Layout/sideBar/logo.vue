@@ -2,11 +2,11 @@
 <div class="logo-container">
   <transition>
     <router-link v-if="!collapse" to="/">
-      <img class="logo" src="@renderer/assets/image/icon.png">
-      <span>管理平台桌面端</span>
+      <img class="sideBar-logo" src="@renderer/assets/image/icon.png">
+      <span class="logo-name">管理平台桌面端</span>
     </router-link>
     <router-link v-else to="/">
-      <img class="logo" src="@renderer/assets/image/icon.png">
+      <img class="sideBar-logo" src="@renderer/assets/image/icon.png">
     </router-link>
   </transition>
 </div>
@@ -26,9 +26,15 @@ defineProps({
 <style lang="scss" scoped>
 .logo-container{
   height: 50px;
-  .logo{
+  padding-left: 10px;
+  .sideBar-logo{
     width: 32px;
     height: 32px;
+    margin: 10px 5px;
+    vertical-align: middle;
+  }
+  .logo-name{
+    color: #FFF;
   }
 }
 </style>
