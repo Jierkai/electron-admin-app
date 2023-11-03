@@ -1,9 +1,11 @@
-<template>
-<div>首页</div>
-</template>
 <script setup>
 
 </script>
+
+<template>
+<div>excel</div>
+</template>
+
 <style lang="less" scoped>
 
 </style>

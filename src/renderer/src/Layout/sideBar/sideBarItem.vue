@@ -1,36 +1,38 @@
 <template>
 
-  <el-sub-menu v-if="Array.isArray(item.children) && item.children.length > 0" index="1">
+  <el-sub-menu v-if="Array.isArray(item.children) && item.children.length > 0" :index="item.path">
     <template #title>
       <el-icon>
         <location/>
       </el-icon>
-      <span>Navigator One</span>
+      <span>{{item.meta.title}}</span>
     </template>
-    <el-menu-item-group title="Group One">
-      <el-menu-item index="1-2">item two</el-menu-item>
-    </el-menu-item-group>
-    <el-menu-item-group title="Group Two">
-      <el-menu-item index="1-3">item three</el-menu-item>
-    </el-menu-item-group>
-    <el-sub-menu index="1-4">
-      <template #title>item four</template>
-      <el-menu-item index="1-4-1">item one</el-menu-item>
-    </el-sub-menu>
+
+    <side-bar-item
+        v-for="i in item.children"
+        :key="i.path"
+        :item="i" />
   </el-sub-menu>
-  <el-menu-item v-else index="1-1" @click="handleRouteTo">item one</el-menu-item>
+  <el-menu-item v-else :index="item.path" @click="handleRouteTo(item)">{{item.meta.title}}</el-menu-item>
 </template>
 <script setup>
 import {Location} from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router'
 import { defineProps } from 'vue'
+
+const router = useRouter()
+
 defineProps({
   item:{
     type:Object,
     required:true,
   }
 })
+
 function  handleRouteTo(v){
   console.log(v)
+  router.push(v.path)
+
 }
 
 </script>

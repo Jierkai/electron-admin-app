@@ -1,5 +1,5 @@
 <template>
-<div>首页</div>
+<div>model</div>
 </template>
 <script setup>
 

@@ -2,6 +2,7 @@ import { getToken } from '@renderer/utils/token'
 import Layout from '@renderer/Layout/index.vue'
 
 const user = {
+  namespaced: true,
   state: () => ({
     sidebarRoutes: [
       {

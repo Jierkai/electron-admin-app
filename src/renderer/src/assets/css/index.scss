@@ -1,4 +1,7 @@
-@import "sideBar";
+@use "sideBar";
+@use "layout";
+@use "navbar";
+@use "theme/global";
 #app{
   height: 100vh;
   min-height: 400px;

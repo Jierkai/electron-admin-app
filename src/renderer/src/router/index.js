@@ -17,12 +17,13 @@ export const constantsRoute = [
   {
     path: '',
     component: Layout,
+    redirect: 'index',
     children: [
       {
         path: '/index',
         component: () => import('@renderer/view/index.vue'),
         name: 'index',
-        meta:{ title: '首页', }
+        meta:{ title: '首页' }
       }
     ]
   }
