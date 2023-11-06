@@ -12,20 +12,16 @@
         <side-bar-item
           v-for="i in computed.sidebarRoutes.value"
           :key="i.path"
-          :item="i"></side-bar-item>
+          :item="i" />
       </el-menu>
     </el-scrollbar>
   </div>
 </template>
 <script setup>
-import {defineProps} from 'vue'
 import Logo from '@renderer/Layout/sideBar/logo.vue'
 import computedForGetter from '@renderer/utils/computedForGetter'
 import SideBarItem from '@renderer/Layout/sideBar/sideBarItem.vue'
 
-defineProps({
-
-})
 const computed = computedForGetter(['sidebarRoutes','isExpand'])
 
 

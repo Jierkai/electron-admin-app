@@ -23,9 +23,12 @@ import AppMain from '@renderer/Layout/AppMain.vue'
 
 const isExpand = ref(true)
 
+
 function isExpandSidebar(e){
   isExpand.value = e
 }
+
+
 
 </script>
 <style lang="less" scoped>

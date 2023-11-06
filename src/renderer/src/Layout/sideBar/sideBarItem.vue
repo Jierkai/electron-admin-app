@@ -18,7 +18,6 @@
 <script setup>
 import {Location} from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router'
-import { defineProps } from 'vue'
 
 const router = useRouter()
 
@@ -29,10 +28,8 @@ defineProps({
   }
 })
 
-function  handleRouteTo(v){
-  console.log(v)
+function handleRouteTo(v){
   router.push(v.path)
-
 }
 
 </script>

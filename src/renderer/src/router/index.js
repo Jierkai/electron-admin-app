@@ -26,6 +26,26 @@ export const constantsRoute = [
         meta:{ title: '首页' }
       }
     ]
+  },
+  {
+    path: '/utils',
+    component: Layout,
+    hidden: false,
+    meta: { title: '工具' },
+    children: [
+      {
+        path: '/excel',
+        component: () => import('@renderer/view/utils/excel/index.vue'),
+        name: 'excel',
+        meta:{ title: '表格', icon:'excel'}
+      },
+      {
+        path: '/model',
+        component: () => import('@renderer/view/utils/model/index.vue'),
+        name: 'model',
+        meta:{ title: '模型', icon: 'model'}
+      }
+    ]
   }
 ]
 
