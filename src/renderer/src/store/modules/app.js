@@ -1,16 +1,16 @@
 const app = {
   namespaced: true,
   state: () => ({
-    isExpand: true,
+    isExpand: true
   }),
   mutations: {
-    TOGGLE_SIDEBAR: (state) =>{
-      state.isExpand = !state.isExpand;
+    TOGGLE_SIDEBAR: (state) => {
+      state.isExpand = !state.isExpand
     }
   },
   actions: {
-    toggleSidebar: ({commit}, isExpand) => {
-      commit('TOGGLE_SIDEBAR', isExpand);
+    toggleSidebar: ({ commit }, isExpand) => {
+      commit('TOGGLE_SIDEBAR', isExpand)
     }
   }
 }

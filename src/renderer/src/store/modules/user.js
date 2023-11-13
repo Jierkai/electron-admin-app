@@ -15,27 +15,21 @@ const user = {
             path: '/excel',
             component: () => import('@renderer/view/index.vue'),
             name: 'excel',
-            meta:{ title: '表格', icon:'excel'}
+            meta: { title: '表格', icon: 'excel' }
           },
           {
             path: '/model',
             component: () => import('@renderer/view/index.vue'),
             name: 'model',
-            meta:{ title: '模型', icon: 'model'}
+            meta: { title: '模型', icon: 'model' }
           }
         ]
       }
     ],
     token: getToken()
   }),
-  mutations: {
-
-  },
-  actions: {
-
-  },
-  getters: {
-
-  }
+  mutations: {},
+  actions: {},
+  getters: {}
 }
 export default user
